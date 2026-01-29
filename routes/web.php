@@ -7,6 +7,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+// ORDER PAGE
+Route::get('/order', function () {
+    return view('order');
+})->name('order.page');
+
 // LOGIN
 Route::get('/login', [AuthController::class, 'showLoginForm'])
     ->name('login.page');
