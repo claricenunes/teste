@@ -9,6 +9,9 @@
 
 body {
     background-color: #fff9ea;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 
 }
 
@@ -18,7 +21,7 @@ section {
 
 .btn-default {
     border: none;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     background-color: lightsalmon;
@@ -30,8 +33,56 @@ section {
     transition: background-color .3s ease;
 }
 
-.btn-default :hover {
+.btn-default:hover {
     background-color: darksalmon;
+}
+
+.btn-primary {
+    background-color: lightsalmon;
+    color: #1d1d1d;
+    border: none;
+}
+
+.btn-register {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 6px 10px;
+    border-radius: 8px;
+    background-color: #fff;
+    color: #1d1d1d;
+    border: 1px solid #e6b9ad;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.btn-register:hover {
+    background-color: #fff3ee;
+}
+
+.login-form {
+    max-width: 420px;
+    margin: 24px auto;
+    padding: 18px;
+    background: rgba(255,255,255,0.6);
+    border-radius: 12px;
+}
+
+.form-group {
+    margin-bottom: 12px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 6px;
+    font-size: 0.95rem;
+}
+
+.form-input {
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
 }
 .hamburguer {
     display: block;
@@ -85,6 +136,85 @@ section {
 
 .section-subtitle {
     font-size: 2.1875rem;
+}
+
+/* Navigation button styling to match login button */
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+/* Center navigation and ensure links align like buttons */
+.main-nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.main-nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav ul li {
+    list-style: none;
+}
+
+.main-nav ul li a {
+    text-decoration: none;
+}
+
+/* Header actions (login + order) */
+.header-actions {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.header-actions .btn-default {
+    padding: 8px 14px;
+}
+
+.main-nav ul li a.btn-default {
+    padding: 8px 12px;
+    font-size: 0.95rem;
+}
+
+/* Ensure mobile nav buttons use same button look */
+#mobile_menu #mobile_nav_list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+#mobile_menu #mobile_nav_list a.btn-default {
+    display: inline-flex;
+    padding: 8px 12px;
+}
+
+/* Footer styling */
+.site-footer {
+    text-align: center;
+    padding: 16px 0;
+    margin-top: auto;
+    width: 100%;
+}
+
+.site-footer .container {
+    display: flex;
+    justify-content: center;
+}
+
+.site-footer .container p {
+    margin: 0;
+    color: #1d1d1d;
+}
+
+main {
+    flex: 1 0 auto;
 }
 
 
